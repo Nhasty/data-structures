@@ -10,7 +10,7 @@ var Queue = function() {
     // initialize qPosition variable at front of q
     var qPosition = 1;
     // if q is not empty adjust qPosition to back of q
-    if (Object.keys(storage).length ) {
+    if (someInstance.size()) {
       qPosition = Math.max.apply(Math, Object.keys(storage)) + 1;
     }
     // store value at q position

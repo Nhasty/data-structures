@@ -23,7 +23,7 @@ stackMethods.push = function(value) {
   currentStack = this.storage;
   var maxKey = 1;
   // if storage is not empty
-  if (Object.keys(currentStack).length) {
+  if (this.size()) {
     // adjust max key
     maxKey = Math.max.apply(Math, Object.keys(currentStack)) + 1;
   }

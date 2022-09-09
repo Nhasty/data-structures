@@ -10,7 +10,7 @@ var Stack = function() {
     // define max key
     var maxKey = 1;
     // if storage is not empty
-    if (Object.keys(storage).length) {
+    if (someInstance.size()) {
       // adjust max key
       var maxKey = Math.max.apply(Math, Object.keys(storage)) + 1;
     }

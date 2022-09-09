@@ -12,7 +12,7 @@ var queueMethods = {};
 queueMethods.enqueue = function (value) {
   var currentQ = this.storage;
   var qPosition = 1;
-  if (Object.keys(currentQ).length) {
+  if (this.size()) {
     qPosition = Math.max.apply(Math, Object.keys(currentQ)) + 1;
   }
   currentQ[qPosition] = value;
