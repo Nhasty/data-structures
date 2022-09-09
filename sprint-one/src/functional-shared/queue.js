@@ -4,9 +4,7 @@ var Queue = function() {
   var someInstance = {};
   // Use an object with numeric keys to store values
   someInstance.storage = {};
-  someInstance.enqueue = queueMethods.enqueue;
-  someInstance.dequeue = queueMethods.dequeue;
-  someInstance.size = queueMethods.size;
+  _.extend(someInstance, queueMethods);
   return someInstance;
 };
 

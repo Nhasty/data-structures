@@ -6,11 +6,12 @@ var Stack = function() {
   // add storage object to instance
   someInstance.storage = {};
   // add push to instance
-  someInstance.push = stackMethods.push;
+  // someInstance.push = stackMethods.push;
   // add pop to instance
-  someInstance.pop = stackMethods.pop;
+  // someInstance.pop = stackMethods.pop;
   // add size to insstance
-  someInstance.size = stackMethods.size;
+  // someInstance.size = stackMethods.size;
+  _.extend(someInstance, stackMethods);
   // return instance
   return someInstance;
 };
