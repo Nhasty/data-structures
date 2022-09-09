@@ -19,10 +19,9 @@ queueMethods.enqueue = function (value) {
 };
 queueMethods.dequeue = function () {
   var currentQ = this.storage;
-  var minKey = 1;
   minKey = Math.min.apply(Math, Object.keys(currentQ));
-  var leaveQ = this.storage[minKey];
-  delete this.storage[minKey];
+  var leaveQ = currentQ[minKey];
+  delete currentQ[minKey];
   return leaveQ;
 };
 queueMethods.size = function () {

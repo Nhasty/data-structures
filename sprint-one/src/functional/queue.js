@@ -19,7 +19,6 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     // remove first person i q from q
-    //debugger
     var minKey = Math.min.apply(Math, Object.keys(storage));
     var leaveQ = storage[minKey];
     delete storage[minKey];
